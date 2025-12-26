@@ -1,0 +1,24 @@
+name: デザイン適用済みスライド作成
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: PDFに変換 (カスタムテーマ適用)
+        uses: marp-team/action-marp-cli@v2
+        with:
+          path: slide.md
+          output: output.pdf
+          theme: style.css
+          
+      - name: 成果物を保存
+        uses: actions/upload-artifact@v3
+        with:
+          name: presentation-pdf
+          path: output.pdf
+

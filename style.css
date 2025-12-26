@@ -1,0 +1,50 @@
+/* @theme spenda-style */
+
+section {
+  background-color: #ffffff;
+  color: #333333;
+  font-size: 30px;
+  padding: 50px;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+/* ヘッダー・フッター */
+footer {
+  position: absolute;
+  bottom: 20px;
+  left: 50px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* タイトルページ (class: lead) */
+section.lead {
+  background-color: #f0f8ff; /* 薄い青色の背景 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* 見出し */
+h1 {
+  color: #1e3a8a; /* 藍色 */
+  font-size: 180%;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #1e3a8a; /* 藍色 */
+  font-size: 150%;
+  border-bottom: 2px solid #e0f2fe; /* 薄い青のライン */
+  padding-bottom: 10px;
+}
+
+/* 強調表示 */
+strong {
+  background: linear-gradient(transparent 60%, #e0f2fe 60%);
+  font-weight: bold;
+  padding: 0 4px;
+}
+
