@@ -1,7 +1,7 @@
 ---
 marp: true
 theme: spenda-style
-size: 4:3
+size: 16:9
 paginate: true
 ---
 
