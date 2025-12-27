@@ -1,12 +1,11 @@
 ---
 marp: true
 theme: spenda-style
-size: 16:9
+size: 4:3
 paginate: true
 ---
 
-# Google Analytics → スプレッドシート
-# データ自動出力手順
+# Google Analytics → スプレッドシート データ自動出力手順
 
 Copyright ©︎ SPENDA Corp. All Rights Reserved.
 
@@ -24,6 +23,8 @@ Copyright ©︎ SPENDA Corp. All Rights Reserved.
 - チームへの共有効率化
 
 ---
+
+<!-- _class: last-slide -->
 
 # お問い合わせ
 

@@ -9,16 +9,40 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       
-      - name: PDFに変換 (カスタムテーマ適用)
-        uses: marp-team/action-marp-cli@v2
+      - name: Node.jsをセットアップ
+        uses: actions/setup-node@v3
         with:
-          path: slide.md
-          output: output.pdf
-          theme: style.css
+          node-version: '18'
+      
+      - name: Marp CLIをインストール
+        run: npm install -g @marp-team/marp-cli
+      
+      - name: outputディレクトリを作成
+        run: mkdir -p output
+      
+      - name: slide.mdをPDFに変換
+        run: marp slide.md --theme style.css --pdf --output output/slide.pdf
+          
+      - name: slide.mdをPPTXに変換
+        run: marp slide.md --theme style.css --pptx --output output/slide.pptx
+      
+      - name: 非エンジニアのためのGitHub基本操作_pushとpull.mdをPDFに変換
+        run: marp "非エンジニアのためのGitHub基本操作_pushとpull.md" --theme style.css --pdf --output "output/非エンジニアのためのGitHub基本操作_pushとpull.pdf"
+          
+      - name: 非エンジニアのためのGitHub基本操作_pushとpull.mdをPPTXに変換
+        run: marp "非エンジニアのためのGitHub基本操作_pushとpull.md" --theme style.css --pptx --output "output/非エンジニアのためのGitHub基本操作_pushとpull.pptx"
           
       - name: 成果物を保存
         uses: actions/upload-artifact@v3
         with:
-          name: presentation-pdf
-          path: output.pdf
+          name: presentation-files
+          path: output/
+          
+      - name: 成果物をGitHubにコミット
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add output/
+          git commit -m "Add converted presentation files" || exit 0
+          git push
 
