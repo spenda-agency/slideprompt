@@ -1,5 +1,9 @@
 name: デザイン適用済みスライド作成
-on: push
+on:
+  push:
+    paths:
+      - 'marp/**'
+      - '.github/workflows/convert.yml'
 
 jobs:
   build:
@@ -8,41 +12,40 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v3
-      
+
       - name: Node.jsをセットアップ
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-      
+
       - name: Marp CLIをインストール
         run: npm install -g @marp-team/marp-cli
-      
+
       - name: outputディレクトリを作成
-        run: mkdir -p output
-      
+        run: mkdir -p marp/output
+
       - name: slide.mdをPDFに変換
-        run: marp slide.md --theme style.css --pdf --output output/slide.pdf
-          
+        run: marp marp/slide.md --theme marp/style.css --pdf --output marp/output/slide.pdf
+
       - name: slide.mdをPPTXに変換
-        run: marp slide.md --theme style.css --pptx --output output/slide.pptx
-      
+        run: marp marp/slide.md --theme marp/style.css --pptx --output marp/output/slide.pptx
+
       - name: 非エンジニアのためのGitHub基本操作_pushとpull.mdをPDFに変換
-        run: marp "非エンジニアのためのGitHub基本操作_pushとpull.md" --theme style.css --pdf --output "output/非エンジニアのためのGitHub基本操作_pushとpull.pdf"
-          
+        run: marp "marp/非エンジニアのためのGitHub基本操作_pushとpull.md" --theme marp/style.css --pdf --output "marp/output/非エンジニアのためのGitHub基本操作_pushとpull.pdf"
+
       - name: 非エンジニアのためのGitHub基本操作_pushとpull.mdをPPTXに変換
-        run: marp "非エンジニアのためのGitHub基本操作_pushとpull.md" --theme style.css --pptx --output "output/非エンジニアのためのGitHub基本操作_pushとpull.pptx"
-          
+        run: marp "marp/非エンジニアのためのGitHub基本操作_pushとpull.md" --theme marp/style.css --pptx --output "marp/output/非エンジニアのためのGitHub基本操作_pushとpull.pptx"
+
       - name: 成果物を保存
         uses: actions/upload-artifact@v3
         with:
           name: presentation-files
-          path: output/
-          
+          path: marp/output/
+
       - name: 成果物をGitHubにコミット
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add output/
+          git add marp/output/
           git commit -m "Add converted presentation files" || exit 0
           git push
-

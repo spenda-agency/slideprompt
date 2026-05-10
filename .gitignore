@@ -1,4 +1,7 @@
 .DS_Store
-output/
-docs/private/
 .vscode/
+docs/private/
+
+# SlideKit (skills) のローカル生成物のみ無視。marp/output/ は CI で commit するため除外しない。
+skills/**/output/
+examples/**/output/
