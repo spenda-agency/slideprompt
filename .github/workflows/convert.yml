@@ -31,7 +31,13 @@ jobs:
           
       - name: 非エンジニアのためのGitHub基本操作_pushとpull.mdをPPTXに変換
         run: marp "非エンジニアのためのGitHub基本操作_pushとpull.md" --theme style.css --pptx --output "output/非エンジニアのためのGitHub基本操作_pushとpull.pptx"
-          
+
+      - name: SPENDA_マーケDX支援_営業資料.mdをPDFに変換
+        run: marp "SPENDA_マーケDX支援_営業資料.md" --theme style.css --pdf --output "output/SPENDA_マーケDX支援_営業資料.pdf"
+
+      - name: SPENDA_マーケDX支援_営業資料.mdをPPTXに変換
+        run: marp "SPENDA_マーケDX支援_営業資料.md" --theme style.css --pptx --output "output/SPENDA_マーケDX支援_営業資料.pptx"
+
       - name: 成果物を保存
         uses: actions/upload-artifact@v3
         with:
