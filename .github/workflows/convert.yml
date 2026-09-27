@@ -14,6 +14,9 @@ jobs:
         with:
           node-version: '18'
       
+      - name: 日本語フォントをインストール
+        run: sudo apt-get update && sudo apt-get install -y fonts-noto-cjk
+
       - name: Marp CLIをインストール
         run: npm install -g @marp-team/marp-cli
       
@@ -21,19 +24,19 @@ jobs:
         run: mkdir -p output
       
       - name: slide.mdをPDFに変換
-        run: marp slide.md --theme style.css --pdf --output output/slide.pdf
+        run: marp slide.md --theme style.css --allow-local-files --pdf --output output/slide.pdf
           
       - name: slide.mdをPPTXに変換
-        run: marp slide.md --theme style.css --pptx --output output/slide.pptx
+        run: marp slide.md --theme style.css --allow-local-files --pptx --output output/slide.pptx
       
       - name: 非エンジニアのためのGitHub基本操作_pushとpull.mdをPDFに変換
-        run: marp "非エンジニアのためのGitHub基本操作_pushとpull.md" --theme style.css --pdf --output "output/非エンジニアのためのGitHub基本操作_pushとpull.pdf"
+        run: marp "非エンジニアのためのGitHub基本操作_pushとpull.md" --theme style.css --allow-local-files --pdf --output "output/非エンジニアのためのGitHub基本操作_pushとpull.pdf"
           
       - name: 非エンジニアのためのGitHub基本操作_pushとpull.mdをPPTXに変換
-        run: marp "非エンジニアのためのGitHub基本操作_pushとpull.md" --theme style.css --pptx --output "output/非エンジニアのためのGitHub基本操作_pushとpull.pptx"
+        run: marp "非エンジニアのためのGitHub基本操作_pushとpull.md" --theme style.css --allow-local-files --pptx --output "output/非エンジニアのためのGitHub基本操作_pushとpull.pptx"
           
       - name: 成果物を保存
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: presentation-files
           path: output/
