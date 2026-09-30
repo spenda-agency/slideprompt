@@ -3,6 +3,20 @@
 Marp でスライド（PDF / PPTX）を作成するためのテンプレート一式です。
 `main` 以外も含め、push すると GitHub Actions（`.github/workflows/convert.yml`）が `output/` に PDF・PPTX を生成します。
 
+## AIによる資料作成の標準ルール
+
+**標準テンプレートは [spenda-2026の正本PPTX](templates/spenda-2026/SPENDA_PPTテンプレート.pptx) です。**
+資料作成を依頼する際は、最初に [AGENTS.md](AGENTS.md) を読ませてください（Claude Code向けの入口は [CLAUDE.md](CLAUDE.md)）。
+
+- PowerPointの作成は、最新の正本PPTXを取得・確認し、既存マスタ・レイアウト・背景・ロゴを引き継いで行います。
+- 正本を取得できない場合は、古いZIP・旧テーマ・独自デザインへ無断で切り替えません。
+- `theme: spenda-style` は2026版のMarp用テーマ名です。Marp変換はデザインの再現であり、正本PPTXのスライドマスタを直接使う処理ではありません。
+- `サンプル出力_md/` にある個別のデザイン指定は参考例であり、標準テンプレートの指定ではありません。
+
+依頼文の例：
+
+> このリポジトリのAGENTS.mdを読み、最新mainのtemplates/spenda-2026/SPENDA_PPTテンプレート.pptxを基礎にPowerPointを作成してください。取得できなければ別テンプレートに切り替えず、その旨を知らせてください。
+
 ## デフォルトテンプレート（SPENDA 2026版）
 
 | ファイル | 役割 |
