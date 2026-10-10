@@ -7,40 +7,38 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v3
-      
+      - uses: actions/checkout@v4
+
       - name: Node.jsをセットアップ
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: '18'
-      
+          node-version: '20'
+
+      - name: Marp CLIをインストール
+        run: npm install -g @marp-team/marp-cli@4.0.3
+
       - name: 日本語フォントをインストール
         run: sudo apt-get update && sudo apt-get install -y fonts-noto-cjk
 
-      - name: Marp CLIをインストール
-        run: npm install -g @marp-team/marp-cli
-      
-      - name: outputディレクトリを作成
-        run: mkdir -p output
-      
-      - name: slide.mdをPDFに変換
-        run: marp slide.md --theme style.css --allow-local-files --pdf --output output/slide.pdf
-          
-      - name: slide.mdをPPTXに変換
-        run: marp slide.md --theme style.css --allow-local-files --pptx --output output/slide.pptx
-      
-      - name: 非エンジニアのためのGitHub基本操作_pushとpull.mdをPDFに変換
-        run: marp "非エンジニアのためのGitHub基本操作_pushとpull.md" --theme style.css --allow-local-files --pdf --output "output/非エンジニアのためのGitHub基本操作_pushとpull.pdf"
-          
-      - name: 非エンジニアのためのGitHub基本操作_pushとpull.mdをPPTXに変換
-        run: marp "非エンジニアのためのGitHub基本操作_pushとpull.md" --theme style.css --allow-local-files --pptx --output "output/非エンジニアのためのGitHub基本操作_pushとpull.pptx"
-          
+      # ルート直下の「marp: true」を含む .md をすべて PDF / PPTX に変換する。
+      # テーマは themes/spenda-detail.css（PPT詳細テンプレ・標準）、style.css（spenda-style・2026版の基本形）、themes/legacy/（旧版）をすべて読み込み、
+      # 各mdの「theme:」指定で使い分ける。
+      - name: スライドをPDF・PPTXに変換
+        run: |
+          mkdir -p output
+          for f in *.md; do
+            grep -q '^marp: true' "$f" || continue
+            name="${f%.md}"
+            marp "$f" --theme-set style.css themes/spenda-detail.css themes/legacy/spenda-style-legacy.css --allow-local-files --pdf --output "output/${name}.pdf"
+            marp "$f" --theme-set style.css themes/spenda-detail.css themes/legacy/spenda-style-legacy.css --allow-local-files --pptx --output "output/${name}.pptx"
+          done
+
       - name: 成果物を保存
         uses: actions/upload-artifact@v4
         with:
           name: presentation-files
           path: output/
-          
+
       - name: 成果物をGitHubにコミット
         run: |
           git config --local user.email "action@github.com"
@@ -48,4 +46,3 @@ jobs:
           git add output/
           git commit -m "Add converted presentation files" || exit 0
           git push
-

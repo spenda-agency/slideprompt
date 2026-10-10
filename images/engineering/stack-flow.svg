@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 540" font-family="Inter,'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans',sans-serif">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0a1433"/><stop offset="1" stop-color="#050a1c"/></linearGradient>
+<linearGradient id="ea" x1="0" x2="1"><stop stop-color="#8196ff" stop-opacity=".35"/><stop offset=".5" stop-color="#a9b8ff"/><stop offset="1" stop-color="#b58cff" stop-opacity=".35"/></linearGradient>
+<linearGradient id="eb" x1="0" x2="1"><stop stop-color="#b58cff" stop-opacity=".35"/><stop offset=".5" stop-color="#d7c4ff"/><stop offset="1" stop-color="#ffffff" stop-opacity=".4"/></linearGradient>
+<linearGradient id="ec" x1="0" x2="1"><stop stop-color="#ffffff" stop-opacity=".4"/><stop offset=".5" stop-color="#ffc8dd"/><stop offset="1" stop-color="#ff9cc2" stop-opacity=".35"/></linearGradient>
+<linearGradient id="nf" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#16224d"/><stop offset="1" stop-color="#0a1230"/></linearGradient>
+<linearGradient id="beam" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#8196ff" stop-opacity="0"/><stop offset=".5" stop-color="#8196ff" stop-opacity=".14"/><stop offset="1" stop-color="#8196ff" stop-opacity="0"/></linearGradient>
+<radialGradient id="cg"><stop stop-color="#ffffff"/><stop offset=".18" stop-color="#dbe2ff"/><stop offset=".45" stop-color="#6d5dff" stop-opacity=".55"/><stop offset="1" stop-color="#6d5dff" stop-opacity="0"/></radialGradient>
+<linearGradient id="rg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a9b8ff"/><stop offset=".5" stop-color="#ffffff"/><stop offset="1" stop-color="#ff9cc2"/></linearGradient>
+<filter id="gl" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 10 5 0 10z" fill="#d7c4ff"/></marker>
+</defs>
+<rect width="1000" height="540" rx="28" fill="url(#bg)"/>
+<rect x="29" y="90" width="172" height="420" rx="22" fill="url(#beam)"/><rect x="29" y="90" width="172" height="420" rx="22" fill="none" stroke="#8196ff" stroke-opacity=".45" stroke-dasharray="3 7"/>
+<text x="29" y="44" font-size="13" fill="#ffffff" fill-opacity=".45">01</text><circle cx="57" cy="40" r="4" fill="#8196ff" filter="url(#gl)"/><text x="69" y="45" font-size="14" letter-spacing="2.4" fill="#fff" font-weight="600">SOURCES</text><text x="29" y="72" font-size="15" fill="#8196ff">収集</text>
+<rect x="289" y="90" width="172" height="420" rx="22" fill="url(#beam)"/><rect x="289" y="90" width="172" height="420" rx="22" fill="none" stroke="#b58cff" stroke-opacity=".45" stroke-dasharray="3 7"/>
+<text x="289" y="44" font-size="13" fill="#ffffff" fill-opacity=".45">02</text><circle cx="317" cy="40" r="4" fill="#b58cff" filter="url(#gl)"/><text x="329" y="45" font-size="14" letter-spacing="2.4" fill="#fff" font-weight="600">PIPELINE</text><text x="289" y="72" font-size="15" fill="#b58cff">統合</text>
+<rect x="559" y="90" width="172" height="420" rx="22" fill="url(#beam)"/><rect x="559" y="90" width="172" height="420" rx="22" fill="none" stroke="#ffffff" stroke-opacity=".45" stroke-dasharray="3 7"/>
+<text x="559" y="44" font-size="13" fill="#ffffff" fill-opacity=".45">03</text><circle cx="587" cy="40" r="4" fill="#ffffff" filter="url(#gl)"/><text x="599" y="45" font-size="14" letter-spacing="2.4" fill="#fff" font-weight="600">INTELLIGENCE</text><text x="559" y="72" font-size="15" fill="#ffffff">知能化</text>
+<rect x="819" y="90" width="172" height="420" rx="22" fill="url(#beam)"/><rect x="819" y="90" width="172" height="420" rx="22" fill="none" stroke="#ff9cc2" stroke-opacity=".45" stroke-dasharray="3 7"/>
+<text x="819" y="44" font-size="13" fill="#ffffff" fill-opacity=".45">04</text><circle cx="847" cy="40" r="4" fill="#ff9cc2" filter="url(#gl)"/><text x="859" y="45" font-size="14" letter-spacing="2.4" fill="#fff" font-weight="600">EXPERIENCE</text><text x="819" y="72" font-size="15" fill="#ff9cc2">活用</text>
+<path d="M175 140 C245.0 140, 245.0 190, 315 190" fill="none" stroke="url(#ea)" stroke-width="1.6" stroke-dasharray="5 9"/>
+<path d="M175 140 C245.0 140, 245.0 290, 315 290" fill="none" stroke="url(#ea)" stroke-width="1.6" stroke-dasharray="5 9"/>
+<path d="M175 140 C245.0 140, 245.0 390, 315 390" fill="none" stroke="url(#ea)" stroke-width="1.6" stroke-dasharray="5 9"/>
+<path d="M175 215 C245.0 215, 245.0 190, 315 190" fill="none" stroke="url(#ea)" stroke-width="1.6" stroke-dasharray="5 9"/>
+<path d="M175 215 C245.0 215, 245.0 290, 315 290" fill="none" stroke="url(#ea)" stroke-width="1.6" stroke-dasharray="5 9"/>
+<path d="M175 215 C245.0 215, 245.0 390, 315 390" fill="none" stroke="url(#ea)" stroke-width="1.6" stroke-dasharray="5 9"/>
+<path d="M175 290 C245.0 290, 245.0 190, 315 190" fill="none" stroke="url(#ea)" stroke-width="1.6" stroke-dasharray="5 9"/>
+<path d="M175 290 C245.0 290, 245.0 290, 315 290" fill="none" stroke="url(#ea)" stroke-width="1.6" stroke-dasharray="5 9"/>
+<path d="M175 290 C245.0 290, 245.0 390, 315 390" fill="none" stroke="url(#ea)" stroke-width="1.6" stroke-dasharray="5 9"/>
+<path d="M175 365 C245.0 365, 245.0 190, 315 190" fill="none" stroke="url(#ea)" stroke-width="1.6" stroke-dasharray="5 9"/>
+<path d="M175 365 C245.0 365, 245.0 290, 315 290" fill="none" stroke="url(#ea)" stroke-width="1.6" stroke-dasharray="5 9"/>
+<path d="M175 365 C245.0 365, 245.0 390, 315 390" fill="none" stroke="url(#ea)" stroke-width="1.6" stroke-dasharray="5 9"/>
+<path d="M175 440 C245.0 440, 245.0 190, 315 190" fill="none" stroke="url(#ea)" stroke-width="1.6" stroke-dasharray="5 9"/>
+<path d="M175 440 C245.0 440, 245.0 290, 315 290" fill="none" stroke="url(#ea)" stroke-width="1.6" stroke-dasharray="5 9"/>
+<path d="M175 440 C245.0 440, 245.0 390, 315 390" fill="none" stroke="url(#ea)" stroke-width="1.6" stroke-dasharray="5 9"/>
+<path d="M435 190 C507.5 190, 507.5 290, 580 290" fill="none" stroke="url(#eb)" stroke-width="1.6" stroke-dasharray="5 9"/>
+<path d="M435 290 C507.5 290, 507.5 290, 580 290" fill="none" stroke="url(#eb)" stroke-width="1.6" stroke-dasharray="5 9"/>
+<path d="M435 390 C507.5 390, 507.5 290, 580 290" fill="none" stroke="url(#eb)" stroke-width="1.6" stroke-dasharray="5 9"/>
+<path d="M710 290 C777.5 290, 777.5 160, 845 160" fill="none" stroke="url(#ec)" stroke-width="1.6" stroke-dasharray="5 9"/>
+<path d="M710 290 C777.5 290, 777.5 245, 845 245" fill="none" stroke="url(#ec)" stroke-width="1.6" stroke-dasharray="5 9"/>
+<path d="M710 290 C777.5 290, 777.5 335, 845 335" fill="none" stroke="url(#ec)" stroke-width="1.6" stroke-dasharray="5 9"/>
+<path d="M710 290 C777.5 290, 777.5 420, 845 420" fill="none" stroke="url(#ec)" stroke-width="1.6" stroke-dasharray="5 9"/>
+<circle cx="245" cy="180" r="3.5" fill="#fff" filter="url(#gl)"/>
+<circle cx="245" cy="300" r="3.5" fill="#fff" filter="url(#gl)"/>
+<circle cx="245" cy="400" r="3.5" fill="#fff" filter="url(#gl)"/>
+<circle cx="505" cy="240" r="3.5" fill="#fff" filter="url(#gl)"/>
+<circle cx="505" cy="290" r="3.5" fill="#fff" filter="url(#gl)"/>
+<circle cx="505" cy="340" r="3.5" fill="#fff" filter="url(#gl)"/>
+<circle cx="778" cy="205" r="3.5" fill="#fff" filter="url(#gl)"/>
+<circle cx="778" cy="300" r="3.5" fill="#fff" filter="url(#gl)"/>
+<circle cx="778" cy="380" r="3.5" fill="#fff" filter="url(#gl)"/>
+<g transform="translate(115 140)"><rect x="-62" y="-20" width="124" height="40" rx="20" fill="url(#nf)" stroke="#8196ff" stroke-opacity=".55"/><circle cx="-43" cy="0" r="4" fill="#8196ff" filter="url(#gl)"/><text x="-31" y="5" fill="#fff" font-size="14">Ads</text></g>
+<g transform="translate(115 215)"><rect x="-62" y="-20" width="124" height="40" rx="20" fill="url(#nf)" stroke="#8196ff" stroke-opacity=".55"/><circle cx="-43" cy="0" r="4" fill="#8196ff" filter="url(#gl)"/><text x="-31" y="5" fill="#fff" font-size="14">GA4</text></g>
+<g transform="translate(115 290)"><rect x="-62" y="-20" width="124" height="40" rx="20" fill="url(#nf)" stroke="#8196ff" stroke-opacity=".55"/><circle cx="-43" cy="0" r="4" fill="#8196ff" filter="url(#gl)"/><text x="-31" y="5" fill="#fff" font-size="14">CRM</text></g>
+<g transform="translate(115 365)"><rect x="-62" y="-20" width="124" height="40" rx="20" fill="url(#nf)" stroke="#8196ff" stroke-opacity=".55"/><circle cx="-43" cy="0" r="4" fill="#8196ff" filter="url(#gl)"/><text x="-31" y="5" fill="#fff" font-size="14">freee</text></g>
+<g transform="translate(115 440)"><rect x="-62" y="-20" width="124" height="40" rx="20" fill="url(#nf)" stroke="#8196ff" stroke-opacity=".55"/><circle cx="-43" cy="0" r="4" fill="#8196ff" filter="url(#gl)"/><text x="-31" y="5" fill="#fff" font-size="14">Slack</text></g>
+<g transform="translate(375 190)"><rect x="-62" y="-20" width="124" height="40" rx="20" fill="url(#nf)" stroke="#b58cff" stroke-opacity=".55"/><circle cx="-43" cy="0" r="4" fill="#b58cff" filter="url(#gl)"/><text x="-31" y="5" fill="#fff" font-size="14">BigQuery</text></g>
+<g transform="translate(375 290)"><rect x="-62" y="-20" width="124" height="40" rx="20" fill="url(#nf)" stroke="#b58cff" stroke-opacity=".55"/><circle cx="-43" cy="0" r="4" fill="#b58cff" filter="url(#gl)"/><text x="-31" y="5" fill="#fff" font-size="14">GAS</text></g>
+<g transform="translate(375 390)"><rect x="-62" y="-20" width="124" height="40" rx="20" fill="url(#nf)" stroke="#b58cff" stroke-opacity=".55"/><circle cx="-43" cy="0" r="4" fill="#b58cff" filter="url(#gl)"/><text x="-31" y="5" fill="#fff" font-size="14">Sheets</text></g>
+<g transform="translate(905 160)"><rect x="-62" y="-20" width="124" height="40" rx="20" fill="url(#nf)" stroke="#ff9cc2" stroke-opacity=".55"/><circle cx="-43" cy="0" r="4" fill="#ff9cc2" filter="url(#gl)"/><text x="-31" y="5" fill="#fff" font-size="14">Dashboard</text></g>
+<g transform="translate(905 245)"><rect x="-62" y="-20" width="124" height="40" rx="20" fill="url(#nf)" stroke="#ff9cc2" stroke-opacity=".55"/><circle cx="-43" cy="0" r="4" fill="#ff9cc2" filter="url(#gl)"/><text x="-31" y="5" fill="#fff" font-size="14">AI Agent</text></g>
+<g transform="translate(905 335)"><rect x="-62" y="-20" width="124" height="40" rx="20" fill="url(#nf)" stroke="#ff9cc2" stroke-opacity=".55"/><circle cx="-43" cy="0" r="4" fill="#ff9cc2" filter="url(#gl)"/><text x="-31" y="5" fill="#fff" font-size="14">Chat UI</text></g>
+<g transform="translate(905 420)"><rect x="-62" y="-20" width="124" height="40" rx="20" fill="url(#nf)" stroke="#ff9cc2" stroke-opacity=".55"/><circle cx="-43" cy="0" r="4" fill="#ff9cc2" filter="url(#gl)"/><text x="-31" y="5" fill="#fff" font-size="14">LP / Ads</text></g>
+<g transform="translate(645 290)">
+<circle r="128" fill="url(#cg)" opacity=".9"/>
+<circle r="92" fill="none" stroke="#ff9cc2" stroke-opacity=".35" stroke-dasharray="34 14"/>
+<circle r="72" fill="none" stroke="#a9b8ff" stroke-opacity=".55" stroke-dasharray="2 7"/>
+<circle r="60" fill="none" stroke="url(#rg)" stroke-width="2" stroke-linecap="round" stroke-dasharray="60 317"/>
+<circle r="52" fill="#070e26" stroke="#ffffff" stroke-opacity=".55"/>
+<text text-anchor="middle" y="-2" fill="#fff" font-size="18" font-weight="700">L-Brain</text>
+<text text-anchor="middle" y="18" fill="#a9b8ff" font-size="10" letter-spacing="2">LOCAL LLM</text>
+<circle cx="0" cy="-78" r="3" fill="#a9b8ff" filter="url(#gl)"/><circle cx="62" cy="62" r="3" fill="#ff9cc2" filter="url(#gl)"/><circle cx="-80" cy="40" r="3" fill="#a9b8ff" filter="url(#gl)"/>
+</g></svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 430" font-family="Inter,'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans',sans-serif">
+<defs><linearGradient id="fl" x1="0" x2="1"><stop stop-color="#8196ff"/><stop offset="1" stop-color="#ff9cc2"/></linearGradient></defs>
+<rect width="880" height="430" rx="22" fill="#070d24" stroke="#fff" stroke-opacity=".15"/>
+<path d="M0 22a22 22 0 0 1 22-22h836a22 22 0 0 1 22 22v34H0z" fill="#111a3c"/>
+<circle cx="30" cy="28" r="7" fill="#ff6b81"/><circle cx="54" cy="28" r="7" fill="#ffc46b"/><circle cx="78" cy="28" r="7" fill="#6be3a4"/>
+<text x="104" y="34" fill="#fff" fill-opacity=".6" font-size="15" font-family="monospace">l-brain — on-premise (demo)</text>
+<rect x="636" y="13" width="226" height="30" rx="15" fill="#6be3a4" fill-opacity=".12" stroke="#6be3a4" stroke-opacity=".5"/>
+<circle cx="656" cy="28" r="5" fill="#6be3a4"/><text x="670" y="34" fill="#9ff0c6" font-size="14">OFFLINE · 外部通信 0</text>
+<text x="30" y="92" fill="#fff" fill-opacity=".45" font-size="15" font-family="monospace">$ model: gemma · engine: vLLM · vector: Qdrant · rag: GraphRAG</text>
+<text x="30" y="134" font-size="19"><tspan fill="#a9b8ff" font-family="monospace">you ›</tspan><tspan fill="#fff" dx="10">図面A-2041に関係する設計基準を教えて</tspan></text>
+<rect x="30" y="156" width="820" height="96" rx="14" fill="#fff" fill-opacity=".04" stroke="#fff" stroke-opacity=".1"/>
+<circle cx="52" cy="182" r="5" fill="#b58cff"/><text x="66" y="188" fill="#d7c4ff" font-size="16">GraphRAG 探索</text>
+<text x="830" y="188" text-anchor="end" fill="#fff" fill-opacity=".55" font-size="15" font-family="monospace">12,480 / 12,480 件</text>
+<rect x="48" y="202" width="784" height="6" rx="3" fill="#fff" fill-opacity=".08"/><rect x="48" y="202" width="784" height="6" rx="3" fill="url(#fl)"/>
+<g font-size="13" fill="#fff" fill-opacity=".8"><rect x="48" y="220" width="120" height="22" rx="11" fill="#8196ff" fill-opacity=".2"/><text x="108" y="236" text-anchor="middle">設計基準書</text>
+<rect x="178" y="220" width="120" height="22" rx="11" fill="#b58cff" fill-opacity=".2"/><text x="238" y="236" text-anchor="middle">図面 A-2041</text>
+<rect x="308" y="220" width="120" height="22" rx="11" fill="#ff9cc2" fill-opacity=".2"/><text x="368" y="236" text-anchor="middle">過去の検討記録</text></g>
+<text x="30" y="292" font-size="19"><tspan fill="#ff9cc2" font-family="monospace">ai ›</tspan><tspan fill="#fff" dx="10">社内の設計基準書と該当図面から、関連箇所を要約して回答します。</tspan></text>
+<text x="76" y="324" fill="#a9b8ff" font-size="15">出典：設計基準書 p.42 / A-2041.dwg</text>
+<path d="M0 368h880v40a22 22 0 0 1-22 22H22a22 22 0 0 1-22-22z" fill="#111a3c"/>
+<g font-size="15" fill="#fff" fill-opacity=".7"><text x="30" y="404">応答 1.2s</text><text x="160" y="404">追加課金 ¥0</text><text x="310" y="404">送信先 社内サーバーのみ</text></g>
+<text x="850" y="404" text-anchor="end" fill="#fff" fill-opacity=".4" font-size="13">※ 画面はデモです</text>
+</svg>

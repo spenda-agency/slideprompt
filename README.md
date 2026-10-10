@@ -1,75 +1,57 @@
-# slideprompt
+# PPT詳細テンプレ
 
-Marp でスライド（PDF / PPTX）を作成するためのテンプレート一式です。
+SPENDAのスライド資料を Markdown（Marp）で作り、**PPT詳細テンプレ**（SPENDA 2026版デザインの詳細版）で PDF・PPTX に変換するリポジトリです。
 `main` 以外も含め、push すると GitHub Actions（`.github/workflows/convert.yml`）が `output/` に PDF・PPTX を生成します。
 
 ## AIによる資料作成の標準ルール
 
-**標準テンプレートは [spenda-2026の正本PPTX](templates/spenda-2026/SPENDA_PPTテンプレート.pptx) です。**
 資料作成を依頼する際は、最初に [AGENTS.md](AGENTS.md) を読ませてください（Claude Code向けの入口は [CLAUDE.md](CLAUDE.md)）。
 
+- 標準テンプレートは **PPT詳細テンプレ**。正本は [SPENDA_components.pptx（16部品）](templates/PPT詳細テンプレ_SPENDA_components.pptx) と [spenda-2026（基本2枚）](templates/spenda-2026/SPENDA_PPTテンプレート.pptx) で、同じスライドマスタ・背景・ロゴの同一デザインです。
 - PowerPointの作成は、最新の正本PPTXを取得・確認し、既存マスタ・レイアウト・背景・ロゴを引き継いで行います。
 - 正本を取得できない場合は、古いZIP・旧テーマ・独自デザインへ無断で切り替えません。
-- `theme: spenda-style` は2026版のMarp用テーマ名です。Marp変換はデザインの再現であり、正本PPTXのスライドマスタを直接使う処理ではありません。
+- Marp変換はデザインの再現であり、正本PPTXのスライドマスタを直接使う処理ではありません。
 - `サンプル出力_md/` にある個別のデザイン指定は参考例であり、標準テンプレートの指定ではありません。
 
 依頼文の例：
 
-> このリポジトリのAGENTS.mdを読み、最新mainのtemplates/spenda-2026/SPENDA_PPTテンプレート.pptxを基礎にPowerPointを作成してください。取得できなければ別テンプレートに切り替えず、その旨を知らせてください。
+> このリポジトリのAGENTS.mdを読み、PPT詳細テンプレ（templates/PPT詳細テンプレ_SPENDA_components.pptx）の部品を使って資料を作成してください。取得できなければ別テンプレートに切り替えず、その旨を知らせてください。
 
-## デフォルトテンプレート（SPENDA 2026版）
+## 使い方（Marp）
 
-| ファイル | 役割 |
+1. `slide.md` か `templates/PPT詳細テンプレ_サンプル.md` をコピーして、リポジトリ直下に `資料名.md` を作る（`theme: spenda-detail`）
+2. [作成ルール](templates/PPT詳細テンプレ_作成ルール.md) の部品（表紙・アジェンダ・カード・ステップ・表・数値など16種）を使って中身を書く
+3. push すると `output/資料名.pdf` と `output/資料名.pptx` が自動で作られる
+
+## テーマ一覧
+
+| テーマ名 | ファイル | 用途 |
+|---|---|---|
+| `spenda-detail` | `themes/spenda-detail.css` | **標準**。PPT詳細テンプレの16部品を再現（4:3） |
+| `spenda-style` | `style.css` | 2026版の基本形（表紙＋本文）。既存資料の互換用 |
+| `spenda-style-legacy` | `themes/legacy/spenda-style-legacy.css` | 旧デザイン。明示された場合のみ |
+
+## フォルダ構成
+
+| パス | 内容 |
 |---|---|
-| `style.css` | デフォルトテーマ（`theme: spenda-style`） |
-| `templates/spenda-2026/SPENDA_PPTテンプレート.pptx` | デザインの元になった PowerPoint テンプレート |
-| `templates/spenda-2026/assets/` | テーマが使う画像（表紙背景・ヘッダー帯・ロゴ・L字フレーム） |
-| `themes/legacy/spenda-style-legacy.css` | 旧デザイン（`theme: spenda-style-legacy`） |
+| `templates/PPT詳細テンプレ_SPENDA_components.pptx` | 正本（16部品） |
+| `templates/spenda-2026/` | 正本（基本2枚）と `spenda-style` 用の画像 |
+| `templates/PPT詳細テンプレ_作成ルール.md` | 書き方・部品・文字数のルール |
+| `templates/PPT詳細テンプレ_サンプル.md` / `.pptx` | 全16部品の見本 |
+| `templates/spenda-detail.src.css` / `build_theme.py` / `assets/` | `spenda-detail` のソースとビルドスクリプト |
+| `output/` | 変換済みの PDF・PPTX |
+| `images/` | 資料ごとの図版 |
 
-### スライドの書き方
+## 手元で変換する
 
-```markdown
----
-marp: true
-theme: spenda-style
-size: 4:3
-paginate: true
----
-
-<!-- _class: lead -->
-
-# 表紙タイトル<br>2行目
-
-## English subtitle
-
----
-
-<!-- header: 章の名前（上部の帯に表示） -->
-
-# 本文スライドのタイトル
-
-## キーメッセージ（20pt 太字）
-
-- 本文テキスト、箇条書きなど（行頭文字 ● ○ ■）
+```bash
+npx @marp-team/marp-cli@4.0.3 資料名.md --theme-set style.css themes/spenda-detail.css themes/legacy/spenda-style-legacy.css --allow-local-files --pptx -o output/資料名.pptx
 ```
 
-- **1枚目は必ず表紙**：`<!-- _class: lead -->` … `#` がタイトル、`##` が英字サブタイトル
-- **2枚目以降は本文**（PPT テンプレート2枚目のスライドマスタ「TITLE_AND_BODY」を再現）
-  - 上部グラデーション帯：`<!-- header: ... -->` の文字（以降のスライドにも引き継がれます。1枚だけなら `_header`）
-  - `#`：タイトルプレースホルダー（24pt）
-  - 本文：18pt、`##` はキーメッセージ（20pt 太字）
-  - 下部グラデーション帯：左にコピーライト、右にページ番号（自動）
-- 旧テンプレートの `title-bar` / `content` / `message-large` / `message-small` / `catchcopy` クラスもそのまま使えます
+PDF は `--pdf`、画像は `--images png` に置き換えます。
 
 ## テンプレートを更新するとき
 
-1. 新しい PPTX を `templates/spenda-2026/SPENDA_PPTテンプレート.pptx` に上書き
-2. 画像が変わった場合は `templates/spenda-2026/assets/` の同名ファイルを差し替え
-3. 色・コピーライト表記・フォントは `style.css` 冒頭の変数（`--spenda-navy`, `--spenda-copyright` など）を編集
-4. 位置やサイズが変わった場合は `style.css` の `section.lead` / `section h1` などの px 値を調整（960×720px 基準）
-
-画像は Markdown ファイルからの相対パスで読み込むため、`.md` はリポジトリ直下に置き、変換時は `--allow-local-files` を付けてください。
-
-```bash
-marp slide.md --theme style.css --allow-local-files --pdf
-```
+- **spenda-detail**：`templates/spenda-detail.src.css` を編集し、`python3 templates/build_theme.py` で `themes/spenda-detail.css` を再生成（`themes/` 側は直接編集しない）。画像は `templates/assets/`。
+- **spenda-style**：`style.css` 冒頭の変数（`--spenda-navy`, `--spenda-copyright` など）と px 値を編集。画像は `templates/spenda-2026/assets/`。
