@@ -108,7 +108,7 @@ paginate: true
 - 手元で出力する場合：
 
 ```bash
-npx @marp-team/marp-cli@4.0.3 資料名.md --theme-set style.css themes/spenda-detail.css --allow-local-files --pptx -o output/資料名.pptx
+npx @marp-team/marp-cli@4.0.3 資料名.md --theme-set style.css themes/spenda-detail.css themes/legacy/spenda-style-legacy.css --allow-local-files --pptx -o output/資料名.pptx
 ```
 
 ## テーマを直すとき

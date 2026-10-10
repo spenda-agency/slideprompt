@@ -1,21 +1,7 @@
-# PPT詳細テンプレ（リポジトリ: ppt-detail-template）
+# Claude Code 向け指示
 
-SPENDAのスライド資料を Marp の Markdown で作り、PDF・PPTX に変換するリポジトリ。
+このリポジトリ（PPT詳細テンプレ）でスライドを作成・編集する前に、[AGENTS.md](AGENTS.md)・[README.md](README.md)・[templates/PPT詳細テンプレ_作成ルール.md](templates/PPT詳細テンプレ_作成ルール.md) を読み、その作成ルールを適用してください。
 
-## スライドを作るときは必ずこのテンプレを使う
-
-- 新しい資料は `theme: spenda-detail`（PPT詳細テンプレ）で作る。旧テーマ `spenda-style`（`style.css`）は既存資料の互換用で、新規には使わない。
-- 書き方・部品・文字数の上限は `templates/PPT詳細テンプレ_作成ルール.md` に従う。
-- 部品のHTMLは `templates/PPT詳細テンプレ_サンプル.md` からコピーする（テンプレ原本の16スライドと1対1で対応）。
-- 新しい資料はリポジトリ直下に `資料名.md` で置く。図版は `images/<資料名>/` に置き、`<div class="figure">` で挿入する。
-
-## 仕上げの確認
-
-- 手元で PNG に書き出して全ページを目視し、文字のはみ出し・重なりがないことを確認する：
-  `CHROME_PATH=$(ls -d /opt/pw-browsers/chromium*/chrome-linux/chrome | head -1) npx @marp-team/marp-cli@4.0.3 資料名.md --theme-set style.css themes/spenda-detail.css --allow-local-files --images png -o <作業用ディレクトリ>/s.png`
-- PPTX が必要なら同じコマンドで `--pptx -o output/資料名.pptx`。
-- push すると `.github/workflows/convert.yml` が全資料を `output/` に変換する。
-
-## テーマの修正
-
-`templates/spenda-detail.src.css` を編集 → `python3 templates/build_theme.py` で `themes/spenda-detail.css` を再生成する。`themes/` のCSSは画像埋め込み済みの生成物なので直接編集しない。
+- 標準テンプレートは **PPT詳細テンプレ**。正本は `templates/PPT詳細テンプレ_SPENDA_components.pptx`（16部品）と `templates/spenda-2026/SPENDA_PPTテンプレート.pptx`（基本2枚）で、同一デザインです。
+- Marp で作る新しい資料は `theme: spenda-detail` を使い、部品のHTMLは `templates/PPT詳細テンプレ_サンプル.md` からコピーします。
+- 正本が取得できない場合は、旧版や別デザインへ無断で切り替えないでください。

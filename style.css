@@ -1,235 +1,342 @@
 /* @theme spenda-style */
+/* @size 4:3 960px 720px */
+/* @size 16:9 1280px 720px */
+
+/*
+ * SPENDA スライドテンプレート（2026版 / デフォルト）
+ * 元デザイン: templates/spenda-2026/SPENDA_PPTテンプレート.pptx
+ *   1枚目 = 表紙（<!-- _class: lead -->）
+ *   2枚目以降 = 本文（スライドマスタ「TITLE_AND_BODY」）
+ *
+ * テンプレートを更新するときは、まず下の変数（色・文言・サイズ）を編集してください。
+ * 画像を差し替える場合は templates/spenda-2026/assets/ の同名ファイルを上書きします。
+ * 旧デザインは themes/legacy/spenda-style-legacy.css（theme: spenda-style-legacy）に残しています。
+ * 座標はすべて 960×720px 基準（PPT の EMU ÷ 9525）。
+ */
 
 section {
-  background-color: #ffffff;
-  color: #333333;
-  font-size: 30px;
-  padding: 0;
-  font-family: 'Helvetica', 'Arial', sans-serif;
+  /* ---- ブランドカラー ---- */
+  --spenda-navy: #262c7b;
+  --spenda-text: #000000;
+  --spenda-muted: #6f9fd6;   /* コピーライト */
+  --spenda-page: #595959;    /* ページ番号（テーマ色 dk2） */
+  --spenda-white: #fdfdfc;
+  --spenda-accent-bg: #e8f3fd;
+
+  /* ---- 文言 ---- */
+  --spenda-copyright: 'Copyright (C) SPENDA, All Rights Reserved';
+  --spenda-cover-copyright: '© 2026 SPENDA Inc.';
+  --spenda-logo-text: 'SPENDA';
+
+  /* ---- 本文スライドのレイアウト ---- */
+  --spenda-band-top: 46px;       /* 上部グラデーション帯の高さ */
+  --spenda-band-bottom: 20px;    /* 下部グラデーション帯の高さ */
+  --spenda-margin-x: 42px;       /* 左右余白（プレースホルダー位置 + 内側余白） */
+  --spenda-title-top: 72px;      /* タイトルプレースホルダーの位置 */
+  --spenda-body-top: 171px;      /* 本文プレースホルダーの位置 */
+  --spenda-title-size: 32px;     /* 24pt */
+  --spenda-body-size: 24px;      /* 18pt */
+  --spenda-body-line-height: 1.4;
+
+  /* ---- フォント ---- */
+  --spenda-font: 'Meiryo UI', 'Meiryo', 'Noto Sans JP', 'Noto Sans CJK JP', 'Hiragino Sans', sans-serif;
+
+  width: 960px;
+  height: 720px;
+  box-sizing: border-box;
   position: relative;
-  border-left: 2px dotted #e0f2fe;
-  border-right: 2px dotted #e0f2fe;
-  border-bottom: 2px dotted #e0f2fe;
-  border-top: none;
+  padding: var(--spenda-body-top) var(--spenda-margin-x) calc(var(--spenda-band-bottom) + 24px);
+  font-family: var(--spenda-font);
+  font-size: var(--spenda-body-size);
+  line-height: var(--spenda-body-line-height);
+  color: var(--spenda-text);
+  background:
+    url('templates/spenda-2026/assets/header-band.png') 0 0 / 100% var(--spenda-band-top) no-repeat,
+    url('templates/spenda-2026/assets/header-band.png') 0 100% / 100% var(--spenda-band-bottom) no-repeat,
+    #ffffff;
 }
 
-/* タイトルバーの背景（全幅、再背面） */
-section:not(.lead)::before {
-  content: '';
+/* ============================================================
+ * 本文スライド（2枚目以降）
+ * ============================================================ */
+
+/* 上部帯のラベル（Marp の header ディレクティブ。章名などに使用） */
+section > header {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  width: 100%;
-  height: 80px;
-  background-color: #e0f2fe;
-  z-index: 0;
+  width: 690px;
+  height: var(--spenda-band-top);
+  padding: 0 0 0 10px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  font-size: 26.7px; /* 20pt */
+  font-weight: bold;
+  line-height: 1.2;
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
-/* タイトルバー（上部左） */
+/* 下部帯のラベル（footer ディレクティブ）は使わない */
+section > footer {
+  display: none;
+}
+
+/* タイトル（タイトルプレースホルダー: 24pt） */
+section h1,
 section .title-bar {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 65%;
-  height: 80px;
-  background-color: transparent;
-  display: flex;
-  align-items: center;
-  padding-left: 30px;
-  z-index: 2;
-  font-size: 48px;
-  font-weight: bold;
-  color: #1e3a8a;
+  top: var(--spenda-title-top);
+  left: var(--spenda-margin-x);
+  right: var(--spenda-margin-x);
   margin: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  font-size: var(--spenda-title-size);
+  font-weight: bold;
+  line-height: 1.3;
+  color: var(--spenda-text);
 }
 
-/* Confidentialボックス（上部右） */
-section .confidential {
+/* コピーライト（下部帯の左側） */
+section::before {
+  content: var(--spenda-copyright);
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 150px;
-  height: 80px;
-  background-color: #666666;
+  left: 0;
+  bottom: 0;
+  height: var(--spenda-band-bottom);
+  padding-left: 42px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  z-index: 2;
-  font-size: 16px;
-  color: #ffffff;
-  font-weight: normal;
-  margin: 0;
+  font-size: 10px; /* 7.5pt */
+  line-height: 1;
+  color: var(--spenda-muted);
 }
 
-/* メインコンテンツエリア */
-section .content {
-  padding: 100px 50px 150px 50px;
-  position: relative;
-  z-index: 1;
+/* ページ番号（下部帯の右側） */
+section::after {
+  right: 4px;
+  bottom: 0;
+  height: var(--spenda-band-bottom);
+  padding: 0 4px 0 0;
+  display: flex;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  font-size: 9.2px; /* 6.92pt */
+  line-height: 1;
+  color: var(--spenda-page);
 }
 
-/* メッセージ（大きい太字） */
+/* 本文内の見出し（キーメッセージ） */
+section h2,
 section .message-large {
-  font-size: 42px;
+  margin: 0 0 14px 0;
+  font-size: 26.7px; /* 20pt */
   font-weight: bold;
-  color: #000000;
-  margin-bottom: 30px;
-  line-height: 1.4;
+  line-height: 1.5;
+  color: var(--spenda-text);
 }
 
-/* メッセージ（小さい通常） */
+section h3 {
+  margin: 18px 0 6px 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--spenda-navy);
+}
+
+section p {
+  margin: 0 0 12px 0;
+}
+
 section .message-small {
-  font-size: 28px;
-  font-weight: normal;
-  color: #000000;
-  margin-top: 20px;
+  margin-top: 14px;
   line-height: 1.6;
 }
 
-/* キャッチコピーボックス（下部左） */
-section .catchcopy {
-  position: absolute;
-  bottom: 60px;
-  left: 50px;
-  background-color: transparent;
-  padding: 15px 25px;
-  font-size: 24px;
-  color: #000000;
-  font-weight: normal;
-  max-width: 60%;
-  z-index: 2;
+/* 箇条書き（マスタの行頭文字 ● ○ ■ を再現） */
+section ul,
+section ol {
+  margin: 6px 0 12px 0;
+  padding-left: 1.3em;
 }
 
-/* フッター（下部右） */
-section:not(.lead)::after {
-  content: 'Copyright © SPENDA Corp. All Rights Reserved.';
-  position: absolute;
-  bottom: 0;
-  right: 50px;
-  padding-bottom: 20px;
-  font-size: 12px;
-  color: #999999;
-  z-index: 2;
+section ul {
+  list-style: '●  ';
 }
 
-/* タイトルページ (class: lead) */
-section.lead {
-  background-color: #f0f8ff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+section ul ul {
+  list-style: '○  ';
+}
+
+section ul ul ul {
+  list-style: '■  ';
+}
+
+section ul li::marker {
+  font-size: 0.75em;
+}
+
+section li {
+  margin: 4px 0;
+}
+
+section strong {
+  color: var(--spenda-navy);
+  font-weight: bold;
+}
+
+section a {
+  color: var(--spenda-navy);
+}
+
+section table {
+  border-collapse: collapse;
+  font-size: 20px;
+}
+
+section th {
+  background: var(--spenda-navy);
+  color: #ffffff;
+  padding: 6px 12px;
+}
+
+section td {
+  border-bottom: 1px solid #d0d7e5;
+  padding: 6px 12px;
+}
+
+section blockquote {
+  margin: 12px 0;
+  padding: 10px 16px;
+  background: var(--spenda-accent-bg);
+  color: var(--spenda-navy);
   border: none;
-  padding: 50px;
 }
 
-section.lead::before {
+/* ---- 旧テンプレート（spenda-style）互換クラス ---- */
+section .confidential {
   display: none;
 }
 
-section.lead::after {
-  display: block;
-  content: 'Copyright © SPENDA Corp. All Rights Reserved.';
-  position: absolute;
-  bottom: 0;
-  right: 50px;
-  padding-bottom: 20px;
-  font-size: 12px;
-  color: #999999;
-  z-index: 2;
-}
-
-section.lead .title-bar,
-section.lead .confidential,
-section.lead .catchcopy {
-  display: none;
-}
-
-section.lead .content {
+section .content {
   padding: 0;
 }
 
-/* 最後のスライド（お問い合わせなど）のスタイル */
-section.last-slide {
-  position: relative;
-  padding-top: 100px;
-}
-
-section.last-slide::before {
-  content: '';
+section .catchcopy {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 80px;
-  background-color: #e0f2fe;
-  z-index: 0;
-}
-
-section.last-slide h1 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 65%;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  padding-left: 30px;
-  z-index: 2;
-  font-size: 48px;
+  left: var(--spenda-margin-x);
+  bottom: calc(var(--spenda-band-bottom) + 24px);
+  max-width: 75%;
+  padding: 10px 16px;
+  font-size: 20px;
   font-weight: bold;
-  color: #1e3a8a;
+  color: var(--spenda-navy);
+  background: var(--spenda-accent-bg);
+}
+
+/* ============================================================
+ * 表紙スライド（<!-- _class: lead -->）
+ * ============================================================ */
+section.lead {
+  padding: 0;
+  color: var(--spenda-white);
+  background:
+    /* ロゴマーク */
+    url('templates/spenda-2026/assets/logo-mark.png') 778px 633px / 40px 34px no-repeat,
+    /* ロゴ背景（白80%） */
+    linear-gradient(rgba(253, 253, 252, 0.8), rgba(253, 253, 252, 0.8)) 764px 622px / 196px 54px no-repeat,
+    /* L字フレーム */
+    url('templates/spenda-2026/assets/title-frame.svg') 441px 146px / 235px 288px no-repeat,
+    /* サブタイトル横の縦バー */
+    linear-gradient(var(--spenda-navy), var(--spenda-navy)) 48px 397px / 21px 73px no-repeat,
+    /* 半透明パネル（白40%） */
+    linear-gradient(rgba(253, 253, 252, 0.4), rgba(253, 253, 252, 0.4)) 0 118px / 703px 398px no-repeat,
+    /* 背景画像（不透明度90%相当） */
+    linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
+    url('templates/spenda-2026/assets/title-bg.jpeg') center / cover no-repeat,
+    #ffffff;
+}
+
+/* 表紙タイトル */
+section.lead h1 {
+  top: 184px;
+  left: 48px;
+  right: auto;
+  width: 620px;
+  height: auto;
+  padding: 0;
+  display: block;
+  font-size: 52.9px; /* 39.6pt */
+  line-height: 74px;
+  color: var(--spenda-white);
+  white-space: normal;
+  overflow: visible;
+}
+
+/* 表紙サブタイトル（縦バーの右） */
+section.lead h2 {
+  position: absolute;
+  top: 399px;
+  left: 83px;
+  width: 560px;
   margin: 0;
+  font-size: 19.2px; /* 14.4pt */
+  line-height: 32.5px;
+  color: #ffffff;
+}
+
+/* 表紙の補足テキスト */
+section.lead p {
+  position: absolute;
+  top: 530px;
+  left: 48px;
+  width: 640px;
+  margin: 0;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+/* ロゴ文字 */
+section.lead::before {
+  content: var(--spenda-logo-text);
+  top: 631px;
+  left: 822px;
+  bottom: auto;
+  padding: 0;
+  width: 126px;
+  height: 34px;
+  justify-content: center;
+  font-size: 24.2px;
+  font-weight: bold;
+  color: var(--spenda-navy);
+}
+
+/* 表紙ではページ番号・header を表示しない */
+section.lead::after,
+section.lead > header {
+  display: none;
+}
+
+/* 表紙下部のコピーライト
+ * ※ Marp は section::after の content 上書きを禁止しているため、h1 の疑似要素で描画
+ *   （h1 の位置 top:184px / left:48px からの相対座標 = スライド上の top:687px / left:790px） */
+section.lead h1::after {
+  content: var(--spenda-cover-copyright);
+  position: absolute;
+  top: 503px;
+  left: 742px;
+  width: 168px;
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-/* 見出し */
-h1 {
-  color: #1e3a8a;
-  font-size: 180%;
-  margin-bottom: 20px;
-}
-
-h2 {
-  color: #1e3a8a;
-  font-size: 150%;
-  border-bottom: 2px solid #e0f2fe;
-  padding-bottom: 10px;
-}
-
-/* 強調表示 */
-strong {
-  background: linear-gradient(transparent 60%, #e0f2fe 60%);
-  font-weight: bold;
-  padding: 0 4px;
-}
-
-/* リスト */
-ul, ol {
-  margin: 20px 0;
-  padding-left: 40px;
-}
-
-li {
-  margin: 10px 0;
-  line-height: 1.6;
-}
-
-
-/* 図版（中央寄せ） */
-section .figure {
   text-align: center;
-  margin-top: 10px;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.4;
+  color: #ffffff;
 }
 
-section .figure p {
-  margin: 0;
+/* ============================================================
+ * 最終スライド（<!-- _class: last-slide -->）: 本文スライドと同じ体裁
+ * ============================================================ */
+section.last-slide {
+  padding-top: var(--spenda-body-top);
 }

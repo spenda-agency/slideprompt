@@ -13,8 +13,6 @@ paginate: true
 
 株式会社SPENDA
 
-Copyright © SPENDA Corp. All Rights Reserved.
-
 ---
 
 <div class="title-bar">本日お伝えしたいこと</div>
