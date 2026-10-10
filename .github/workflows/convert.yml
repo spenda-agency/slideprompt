@@ -39,10 +39,10 @@ jobs:
         run: marp "SPENDA_マーケDX支援_営業資料.md" --theme style.css --pptx --output "output/SPENDA_マーケDX支援_営業資料.pptx"
 
       - name: SPENDA_Engineering_会社紹介資料.mdをPDFに変換
-        run: marp "SPENDA_Engineering_会社紹介資料.md" --theme style.css --pdf --output "output/SPENDA_Engineering_会社紹介資料.pdf"
+        run: marp "SPENDA_Engineering_会社紹介資料.md" --theme style.css --allow-local-files --pdf --output "output/SPENDA_Engineering_会社紹介資料.pdf"
 
       - name: SPENDA_Engineering_会社紹介資料.mdをPPTXに変換
-        run: marp "SPENDA_Engineering_会社紹介資料.md" --theme style.css --pptx --output "output/SPENDA_Engineering_会社紹介資料.pptx"
+        run: marp "SPENDA_Engineering_会社紹介資料.md" --theme style.css --allow-local-files --pptx --output "output/SPENDA_Engineering_会社紹介資料.pptx"
 
       - name: 成果物を保存
         uses: actions/upload-artifact@v3

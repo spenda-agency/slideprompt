@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 300" font-family="Inter,'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans',sans-serif">
+<defs><linearGradient id="bx" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a9b8ff"/><stop offset="1" stop-color="#6d5dff"/></linearGradient>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0a1433"/><stop offset="1" stop-color="#050a1c"/></linearGradient>
+<filter id="gl" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+<rect width="880" height="300" rx="26" fill="url(#bg)"/>
+<rect x="28" y="36" width="536" height="236" rx="22" fill="#8196ff" fill-opacity=".08" stroke="url(#bx)" stroke-width="2" stroke-dasharray="8 8"/>
+<text x="56" y="76" fill="#a9b8ff" font-size="20" letter-spacing="2">社内ネットワーク（完全閉域）</text>
+<g transform="translate(80 104)"><rect width="172" height="112" rx="16" fill="#0b1433" stroke="#fff" stroke-opacity=".35"/>
+<g transform="translate(20 20)"><rect width="132" height="18" rx="9" fill="#fff" fill-opacity=".08"/><circle cx="12" cy="9" r="4.5" fill="#8196ff" filter="url(#gl)"/></g>
+<g transform="translate(20 47)"><rect width="132" height="18" rx="9" fill="#fff" fill-opacity=".08"/><circle cx="12" cy="9" r="4.5" fill="#8196ff" filter="url(#gl)"/></g>
+<g transform="translate(20 74)"><rect width="132" height="18" rx="9" fill="#fff" fill-opacity=".08"/><circle cx="12" cy="9" r="4.5" fill="#8196ff" filter="url(#gl)"/></g>
+<text x="86" y="140" text-anchor="middle" fill="#fff" fill-opacity=".8" font-size="17">GPU Server</text></g>
+<g transform="translate(340 104)"><rect width="172" height="112" rx="16" fill="#0b1433" stroke="#fff" stroke-opacity=".35"/>
+<g transform="translate(52 26)"><rect width="56" height="70" rx="5" fill="#fff" fill-opacity=".1"/><rect x="10" y="-7" width="56" height="70" rx="5" fill="#fff" fill-opacity=".16"/><rect x="20" y="-14" width="56" height="70" rx="5" fill="#a9b8ff" fill-opacity=".38"/></g>
+<text x="86" y="140" text-anchor="middle" fill="#fff" fill-opacity=".8" font-size="17">社内ナレッジ</text></g>
+<path d="M256 160 H336" stroke="url(#bx)" stroke-width="3" stroke-dasharray="6 8"/>
+<path d="M330 152 l8 8 -8 8 M262 152 l-8 8 8 8" fill="none" stroke="#a9b8ff" stroke-width="2.4" stroke-linecap="round"/>
+<text x="296" y="146" text-anchor="middle" fill="#a9b8ff" font-size="13">GraphRAG</text>
+<path d="M564 154 H680" stroke="#fff" stroke-opacity=".25" stroke-width="2" stroke-dasharray="6 8"/>
+<g transform="translate(622 154)"><circle r="21" fill="#12081c" stroke="#ff7896" stroke-width="2"/><path d="M-8 -8 L8 8 M8 -8 L-8 8" stroke="#ff8ca5" stroke-width="3" stroke-linecap="round"/></g>
+<text x="622" y="206" text-anchor="middle" fill="#ff8ca5" font-size="17">通信なし</text>
+<g transform="translate(700 104)" opacity=".55"><path d="M36 54c-16 0-28-12-28-27S20 0 36 0c10 0 20 6 24 16 2-.8 6-1.2 8-1.2 14 0 26 12 26 27s-12 26-26 26z" fill="none" stroke="#fff" stroke-width="2.4" transform="translate(16 16)"/>
+<text x="64" y="116" text-anchor="middle" fill="#fff" font-size="17">インターネット</text></g>
+</svg>

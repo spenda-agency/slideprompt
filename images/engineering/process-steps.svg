@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 250" font-family="Inter,'Noto Sans JP','Noto Sans CJK JP','Hiragino Sans',sans-serif">
+<defs><linearGradient id="rl" x1="0" x2="1"><stop stop-color="#8196ff"/><stop offset=".5" stop-color="#b58cff"/><stop offset="1" stop-color="#ff9cc2"/></linearGradient><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0a1433"/><stop offset="1" stop-color="#050a1c"/></linearGradient></defs>
+<rect width="880" height="250" rx="24" fill="url(#bg)"/>
+<line x1="80" y1="70" x2="800" y2="70" stroke="url(#rl)" stroke-width="3"/>
+<circle cx="110" cy="70" r="20" fill="#070e26" stroke="#8196ff" stroke-width="3"/><circle cx="110" cy="70" r="7" fill="#8196ff"/>
+<text x="110" y="34" text-anchor="middle" fill="#fff" fill-opacity=".5" font-size="15">01</text>
+<text x="110" y="124" text-anchor="middle" fill="#8196ff" font-size="14" letter-spacing="2.4">DISCOVER</text><text x="110" y="160" text-anchor="middle" fill="#fff" font-size="26" font-weight="700">課題整理</text><text x="110" y="196" text-anchor="middle" fill="#fff" fill-opacity=".7" font-size="15">現状と目的を共有</text>
+<path d="M210 64 l10 6 -10 6" fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="2"/>
+<circle cx="330" cy="70" r="20" fill="#070e26" stroke="#b58cff" stroke-width="3"/><circle cx="330" cy="70" r="7" fill="#b58cff"/>
+<text x="330" y="34" text-anchor="middle" fill="#fff" fill-opacity=".5" font-size="15">02</text>
+<text x="330" y="124" text-anchor="middle" fill="#b58cff" font-size="14" letter-spacing="2.4">DESIGN</text><text x="330" y="160" text-anchor="middle" fill="#fff" font-size="26" font-weight="700">設計・検証</text><text x="330" y="196" text-anchor="middle" fill="#fff" fill-opacity=".7" font-size="15">小さく試し、構成を決める</text>
+<path d="M430 64 l10 6 -10 6" fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="2"/>
+<circle cx="550" cy="70" r="20" fill="#070e26" stroke="#d78cf0" stroke-width="3"/><circle cx="550" cy="70" r="7" fill="#d78cf0"/>
+<text x="550" y="34" text-anchor="middle" fill="#fff" fill-opacity=".5" font-size="15">03</text>
+<text x="550" y="124" text-anchor="middle" fill="#d78cf0" font-size="14" letter-spacing="2.4">BUILD</text><text x="550" y="160" text-anchor="middle" fill="#fff" font-size="26" font-weight="700">実装・連携</text><text x="550" y="196" text-anchor="middle" fill="#fff" fill-opacity=".7" font-size="15">業務に合わせて組み込む</text>
+<path d="M650 64 l10 6 -10 6" fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="2"/>
+<circle cx="770" cy="70" r="20" fill="#070e26" stroke="#ff9cc2" stroke-width="3"/><circle cx="770" cy="70" r="7" fill="#ff9cc2"/>
+<text x="770" y="34" text-anchor="middle" fill="#fff" fill-opacity=".5" font-size="15">04</text>
+<text x="770" y="124" text-anchor="middle" fill="#ff9cc2" font-size="14" letter-spacing="2.4">EVOLVE</text><text x="770" y="160" text-anchor="middle" fill="#fff" font-size="26" font-weight="700">運用・改善</text><text x="770" y="196" text-anchor="middle" fill="#fff" fill-opacity=".7" font-size="15">活用状況から磨き続ける</text>
+<text x="440" y="232" text-anchor="middle" fill="#a9b8ff" font-size="15">最短2週間で稼働</text></svg>

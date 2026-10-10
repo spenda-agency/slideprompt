@@ -113,7 +113,7 @@ Copyright © SPENDA Corp. All Rights Reserved.
 <div class="message-large">「成果」と「コスト削減」を両方、数値で約束できる会社は他にありません</div>
 <div class="message-small">広告代理店：成果は見るが、工数・ツール費は見ない（むしろ増やす）。システム会社：構築して終わり、成果に責任を持たない。コンサル会社：提案するが、実行しない。SPENDA：戦略から実装・運用まで一気通貫で、成果KPIと3つの削減KPIを毎月報告します。</div>
 </div>
-<div class="catchcopy">10年・500件以上の運用経験 × データ基盤の技術力</div>
+<div class="catchcopy">15年目・300件のアカウント運用経験 × データ基盤の技術力</div>
 
 ---
 
@@ -181,7 +181,7 @@ Copyright © SPENDA Corp. All Rights Reserved.
 <div class="confidential">Confidential</div>
 <div class="content">
 <div class="message-large">株式会社SPENDA — Big Data × デジタル技術で企業成長に貢献する</div>
-<div class="message-small">支援領域：広告運用代行（Google/Yahoo!/Meta/YouTube/Amazon他）、GA4解析、データ基盤構築（BigQuery/Looker Studio/Tableau）、AI導入支援、クリエイティブ制作。運用歴10年・500件以上。1,000以上の情報源から最新情報を収集するプロマーケターと、200名以上の専門人材ネットワークで対応します。</div>
+<div class="message-small">支援領域：広告運用代行（Google/Yahoo!/Meta/YouTube/Amazon他）、GA4解析、データ基盤構築（BigQuery/Looker Studio/Tableau）、AI導入支援、クリエイティブ制作。運用歴15年目・通算300件のアカウント。1,000以上の情報源から最新情報を収集するプロマーケターと、200名以上の専門人材ネットワークで対応します。</div>
 </div>
 <div class="catchcopy">https://spendacorp.com</div>
 

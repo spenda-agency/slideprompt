@@ -80,8 +80,12 @@ Copyright © SPENDA Corp. All Rights Reserved.
 <div class="title-bar">エンジニアリングスタック</div>
 <div class="confidential">Confidential</div>
 <div class="content">
-<div class="message-large">データが流れ、AIが考え、現場が動く。4つのレイヤーを一気通貫で設計します</div>
-<div class="message-small">【01 SOURCES 収集】Ads・GA4・CRM・freee・Slackなど散らばった業務データを自動で集める。【02 PIPELINE 統合】BigQuery・GAS・Sheetsで統合・整形。【03 INTELLIGENCE 知能化】ローカルLLM「L-Brain」が社内ナレッジで考える。【04 EXPERIENCE 活用】Dashboard・AI Agent・Chat UI・LP/Adsとして現場に届ける。</div>
+<div class="message-large">データが流れ、AIが考え、現場が動く。</div>
+<div class="figure">
+
+![h:380](images/engineering/stack-flow.svg)
+
+</div>
 </div>
 <div class="catchcopy">収集・統合・知能化・活用 — SPENDAのエンジニアリングの核</div>
 
@@ -91,9 +95,28 @@ Copyright © SPENDA Corp. All Rights Reserved.
 <div class="confidential">Confidential</div>
 <div class="content">
 <div class="message-large">インターネットに出さない、社内専用のAIをつくる</div>
-<div class="message-small">オープンモデルとGraphRAGを組み合わせ、完全閉域のオンプレミス環境に構築。GPU選定から推論エンジン（vLLM等）、ベクトルDB（Qdrant等）、UIまで一括で設計します。【外部通信】0【図面検索時間】80%削減【API従量課金】¥0 — 月額定額で使い放題です。</div>
+<div class="figure">
+
+![h:210](images/engineering/lbrain-network.svg)
+
+</div>
+<div class="message-small">オープンモデル×GraphRAGを完全閉域に構築。GPU選定からUIまで一括設計。【外部通信】0【図面検索時間】80%削減【API従量課金】¥0</div>
 </div>
 <div class="catchcopy">機密データを社外に出さずに、AIを業務で使い倒す</div>
+
+---
+
+<div class="title-bar">L-Brain 利用イメージ</div>
+<div class="confidential">Confidential</div>
+<div class="content">
+<div class="message-large">社内ナレッジを探索し、出典つきで即答する</div>
+<div class="figure">
+
+![h:330](images/engineering/lbrain-terminal.svg)
+
+</div>
+</div>
+<div class="catchcopy">応答1.2s・追加課金¥0・送信先は社内サーバーのみ</div>
 
 ---
 
@@ -141,7 +164,12 @@ Copyright © SPENDA Corp. All Rights Reserved.
 <div class="confidential">Confidential</div>
 <div class="content">
 <div class="message-large">構想から、現場で動く仕組みへ。最短2週間で稼働します</div>
-<div class="message-small">【01 DISCOVER 課題整理】ヒアリングと無料診断で現状を可視化し、KPIと優先度を決定。【02 DESIGN 設計・検証】PoCやデモで精度と費用対効果を検証し、GPU・ツール・連携方式を選定。【03 BUILD 実装・連携】既存SaaSや社内システムとつなぎ、現場のフローに組み込む。【04 EVOLVE 運用・改善】数値を見ながら月次で改善を重ねる。</div>
+<div class="figure">
+
+![h:240](images/engineering/process-steps.svg)
+
+</div>
+<div class="message-small">無料診断で現状を可視化 → PoCで費用対効果を検証 → 既存SaaSと連携 → 月次で改善を重ねます。</div>
 </div>
 <div class="catchcopy">ご相談内容に応じて、支援範囲と進行方法を設計します</div>
 

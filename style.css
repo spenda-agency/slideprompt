@@ -223,3 +223,13 @@ li {
   line-height: 1.6;
 }
 
+
+/* 図版（中央寄せ） */
+section .figure {
+  text-align: center;
+  margin-top: 10px;
+}
+
+section .figure p {
+  margin: 0;
+}
